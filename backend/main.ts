@@ -3,8 +3,39 @@ import express from "npm:express@4.18.2";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.sendFile("../website/app.html");
+const files: { request: string; name: string; location: string }[] = [
+  {
+    request: "/",
+    name: "app.html",
+    location: "/website/app.html",
+  },
+  {
+    request: "/app.css",
+    name: "app.css",
+    location: "/website/assets/css/app.css",
+  },
+  {
+    request: "/appinit.js",
+    name: "appinit.js",
+    location: "/website/assets/js/appinit.js",
+  },
+  {
+    request: "/favicon.ico",
+    name: "favicon.ico",
+    location: "/website/assets/images/congenial_icons/white/favicon-96x96.png",
+  },
+];
+// Middleware that will handle file requests
+app.use((req, res, next) => {
+  console.log(req.path);
+  const requested = req.path;
+  for (var file of files) {
+    if (requested === file.request) {
+      res.sendFile(file.location, { root: "../" });
+      break;
+    }
+  }
+  next();
 });
 
 app.listen(8000);
