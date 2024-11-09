@@ -1,3 +1,4 @@
 .env
+.gittoken
 deno.lock
 node_modules/
