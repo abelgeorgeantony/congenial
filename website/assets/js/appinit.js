@@ -1,6 +1,16 @@
 function initApp() {
   addCSSFile("app.css");
-  //alert("page loaded");
+  /*const darkModeEnabled =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  console.log(darkModeEnabled);*/
+
+  if (userIsAuthenticated() === false) {
+    window.location.replace("authenticate");
+  }
+}
+function userIsAuthenticated() {
+  return false;
 }
 
 async function addCSSFile(name) {

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="authenticate.css" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        />
+        <script src="authenticate.js"></script>
+        <title>Welcome</title>
+    </head>
+    <body onload="setupAuth()">
+        <div id="ui-container">
+            <div id="auth-container">
+                <div id="auth-container-header">
+                    <button
+                        onclick="showSignupForm()"
+                        id="form-switch-btn-left"
+                        class="form-switch-btn"
+                    >
+                        Sign Up
+                    </button>
+                    <hr style="height: 90%; margin: 0" />
+                    <button
+                        onclick="showLoginForm()"
+                        id="form-switch-btn-right"
+                        class="form-switch-btn"
+                    >
+                        Log In
+                    </button>
+                </div>
+                <div id="auth-body">
+                    <form
+                        id="loginForm"
+                        action="loginsubmit"
+                        method="post"
+                        style="display: none"
+                    >
+                        <h2>Login</h2>
+                        <label for="username">Username:</label>
+                        <br />
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            required
+                        />
+                        <br />
+                        <label for="password">Password:</label>
+                        <br />
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                        <br /><br />
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <form
+                        id="signupForm"
+                        action="signupsubmit"
+                        method="post"
+                        style="display: none"
+                    >
+                        <h2>Signup</h2>
+                        <label for="newUsername">Username:</label>
+                        <br />
+                        <input
+                            type="text"
+                            id="newUsername"
+                            name="newUsername"
+                            required
+                        />
+                        <br />
+                        <label for="newPassword">Password:</label>
+                        <br />
+                        <input
+                            type="password"
+                            id="newPassword"
+                            name="newPassword"
+                            required
+                        />
+                        <button type="button">
+                            <i class="fa fa-eye" id="eye"></i>
+                        </button>
+                        <br />
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <br />
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            required
+                        />
+                        <br /><br />
+                        <button type="submit">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

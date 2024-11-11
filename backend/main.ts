@@ -10,14 +10,29 @@ const files: { request: string; name: string; location: string }[] = [
     location: "/website/app.html",
   },
   {
+    request: "/authenticate",
+    name: "authenticate.html",
+    location: "/website/assets/html/authenticate.html",
+  },
+  {
     request: "/app.css",
     name: "app.css",
     location: "/website/assets/css/app.css",
   },
   {
+    request: "/authenticate.css",
+    name: "authenticate.css",
+    location: "/website/assets/css/authenticate.css",
+  },
+  {
     request: "/appinit.js",
     name: "appinit.js",
     location: "/website/assets/js/appinit.js",
+  },
+  {
+    request: "/authenticate.js",
+    name: "authenticate.js",
+    location: "/website/assets/js/authenticate.js",
   },
   {
     request: "/favicon.ico",
