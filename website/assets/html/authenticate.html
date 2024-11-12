@@ -33,12 +33,7 @@
                     </button>
                 </div>
                 <div id="auth-body">
-                    <form
-                        id="loginForm"
-                        action="loginsubmit"
-                        method="post"
-                        style="display: none"
-                    >
+                    <form id="loginForm" style="display: none">
                         <h2>Login</h2>
                         <label for="username">Username:</label>
                         <br />
@@ -58,15 +53,10 @@
                             required
                         />
                         <br /><br />
-                        <button type="submit">Login</button>
+                        <button type="button" onclick="login()">Login</button>
                     </form>
 
-                    <form
-                        id="signupForm"
-                        action="signupsubmit"
-                        method="post"
-                        style="display: none"
-                    >
+                    <form id="signupForm" style="display: none">
                         <h2>Signup</h2>
                         <label for="newUsername">Username:</label>
                         <br />
@@ -89,16 +79,18 @@
                             <i class="fa fa-eye" id="eye"></i>
                         </button>
                         <br />
-                        <label for="confirmPassword">Confirm Password:</label>
+                        <label for="newPasswordConfirm"
+                            >Confirm Password:</label
+                        >
                         <br />
                         <input
                             type="password"
-                            id="confirmPassword"
-                            name="confirmPassword"
+                            id="newPasswordConfirm"
+                            name="newPasswordConfirm"
                             required
                         />
                         <br /><br />
-                        <button type="submit">Signup</button>
+                        <button type="button" onclick="signup()">Signup</button>
                     </form>
                 </div>
             </div>

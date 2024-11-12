@@ -30,6 +30,11 @@ const files: { request: string; name: string; location: string }[] = [
     location: "/website/assets/js/appinit.js",
   },
   {
+    request: "/popupwindow.js",
+    name: "popupwindow.js",
+    location: "/website/assets/js/popupwindow.js",
+  },
+  {
     request: "/authenticate.js",
     name: "authenticate.js",
     location: "/website/assets/js/authenticate.js",
