@@ -17,6 +17,7 @@
             <div id="auth-container">
                 <div id="auth-container-header">
                     <button
+                        type="button"
                         onclick="showSignupForm()"
                         id="form-switch-btn-left"
                         class="form-switch-btn"
@@ -25,6 +26,7 @@
                     </button>
                     <hr style="height: 90%; margin: 0" />
                     <button
+                        type="button"
                         onclick="showLoginForm()"
                         id="form-switch-btn-right"
                         class="form-switch-btn"
@@ -53,7 +55,6 @@
                             required
                         />
                         <br /><br />
-                        <button type="button" onclick="login()">Login</button>
                     </form>
 
                     <form id="signupForm" style="display: none">
@@ -90,8 +91,10 @@
                             required
                         />
                         <br /><br />
-                        <button type="button" onclick="signup()">Signup</button>
                     </form>
+                </div>
+                <div id="auth-container-footer">
+                    <button type="button" id="auth-submit-btn"></button>
                 </div>
             </div>
         </div>

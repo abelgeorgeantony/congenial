@@ -11,6 +11,11 @@ function showSignupForm() {
   document
     .getElementById("form-switch-btn-left")
     .classList.add("btn-highlight");
+
+  document.getElementById("auth-submit-btn").innerText = "Sign Up";
+  document.getElementById("auth-submit-btn").onclick = function () {
+    signup();
+  };
 }
 function showLoginForm() {
   document.getElementById("signupForm").style.display = "none";
@@ -22,4 +27,9 @@ function showLoginForm() {
   document
     .getElementById("form-switch-btn-right")
     .classList.add("btn-highlight");
+
+  document.getElementById("auth-submit-btn").innerText = "Log In";
+  document.getElementById("auth-submit-btn").onclick = function () {
+    login();
+  };
 }
